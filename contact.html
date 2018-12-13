@@ -3,7 +3,7 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>John Falzone</title>
+        <title>Hello, I am John Falzone</title>
     </head>
     <body>
        <nav>
@@ -14,5 +14,30 @@
            </ul>
        </nav>
        
+       <form action="https://formspree.io/OnixCode@mailinator.com" method="POST"></form>
+       <h1>Send me an email.</h1>
+       <div>
+           <label for="name">Name</label>
+           <input id="name" type="name" name="name">
+       </div>
+
+       <div>
+           <label for="email">Email</label>
+           <input id="email" type="email" name="_replyto">
+       </div>
+
+       <div>
+           <label for="message">Messsage</label>
+           <textarea id="message" name="message"></textarea>
+       </div>
+
+       <div>
+           <input type="hidden" name="_subject" value="New submission!">
+       </div>
+
+       <div>
+           <input type="submit" value="Send">
+       </div>
+
     </body>
 </html>
