@@ -47,6 +47,52 @@ main{
     max-width: 100%;
 }
 
+.clearfix:after{
+    content: "";
+    display: table;
+    clear: both;
+}
+
+.float-left{
+    float: left;
+}
+
+.float-right{
+    float: right;
+}
+
+h1{
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+h3{
+    margin-bottom: 2px;
+    text-align: center;
+}
+
+h4{
+    margin-bottom: 6px;
+    
+}
+
+ul{
+    margin-top: 4px;
+    margin-bottom: 10px;
+}
+
+p{
+    margin-top: 2px;
+    margin-bottom: 2px;
+}
+
+th{
+    text-align: left;
+    font-weight: normal;
+    font-style: italic;
+    padding-right: 1rem;
+}
+
 header{
     height: 50px;
     background: #000;
