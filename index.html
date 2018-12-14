@@ -10,6 +10,7 @@
     <body>
        <header>
             <span class="logo">My Website</span>
+            <a id="toggleMenu">Menu</a>
             <nav>
                 <ul>
                     <li><a href="index.html">Home</a></li>
@@ -21,12 +22,25 @@
        
     <main>
        <h1>Hello, I am John Falzone</h1>
-
-       <img 
+        <p>
+            <img 
             class="avatar"
-            src="https://www.gravatar.com/avatar/4678a33bf44c38e54a58745033b4d5c6?d=mm&s=64" 
-            alt="John Falzone">
-       <p>In life, sometimes you have an opportunity to fulfill your purpose. I am achieving that through this page.</p> 
+                src="https://www.gravatar.com/avatar/4678a33bf44c38e54a58745033b4d5c6?d=mm&s=64" alt="John Falzone">
+            In life, sometimes you have an opportunity to fulfill your purpose. I am achieving that through this page.</p> 
     </main>
+
+    <script>
+        var toggleMenu = document.getElementById('toggleMenu');
+        var nav = document.querySelector('nav');
+        toggleMenu.addEventListener(
+            'click',
+            function(){
+            if(nav.style.display=='block'){
+                nav.style.display='none';
+            }else{
+                nav.style.display='block';
+            }
+            });
+    </script>
     </body>
 </html>
