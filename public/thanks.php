@@ -4,8 +4,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" type="text/css" href="./dist/css/main.min.css">
   <title>Hello, I am John Falzone</title>
+  <link rel="stylesheet" type="text/css" href="./dist/css/main.min.css">
 </head>
 
 <body>
@@ -14,18 +14,15 @@
     <a id="toggleMenu">Menu</a>
     <nav>
       <ul>
-        <li><a href="index.html">Home</a></li>
-        <li><a href="resume.html">Résumé</a></li>
-        <li><a href="contact.html">Contact</a></li>
+        <li><a href="index.php">Home</a></li>
+        <li><a href="resume.php">Résumé</a></li>
+        <li><a href="contact.php">Contact</a></li>
       </ul>
     </nav>
   </header>
 
   <main>
-    <h1>Hello, I am John Falzone</h1>
-    <p>
-      <img class="avatar" src="https://www.gravatar.com/avatar/4678a33bf44c38e54a58745033b4d5c6?d=mm&s=64" alt="John Falzone">
-      In life, sometimes you have an opportunity to fulfill your purpose. I am achieving that through this page.</p>
+    <h1>Thank you for your submission!</h1>
   </main>
 
   <script>
