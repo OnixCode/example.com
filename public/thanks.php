@@ -1,43 +1,14 @@
-<!DOCTYPE html>
-<html lang="en">
+<?php
 
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Hello, I am John Falzone</title>
-  <link rel="stylesheet" type="text/css" href="./dist/css/main.min.css">
-</head>
+$meta=[];
+$meta['title']="Thank You!";
+$meta['description']='We appreciate your inquiry and respond promptly';
 
-<body>
-  <header>
-    <span class="logo">My Website</span>
-    <a id="toggleMenu">Menu</a>
-    <nav>
-      <ul>
-        <li><a href="index.php">Home</a></li>
-        <li><a href="resume.php">Résumé</a></li>
-        <li><a href="contact.php">Contact</a></li>
-      </ul>
-    </nav>
-  </header>
+$content = <<<EOT
+<h1>Thank you for your submission!</h1>
 
-  <main>
-    <h1>Thank you for your submission!</h1>
-  </main>
+EOT;
 
-  <script>
-    var toggleMenu = document.getElementById('toggleMenu');
-    var nav = document.querySelector('nav');
-    toggleMenu.addEventListener(
-      'click',
-      function () {
-        if (nav.style.display == 'block') {
-          nav.style.display = 'none';
-        } else {
-          nav.style.display = 'block';
-        }
-      });
-  </script>
-</body>
+require '../core/layout.php';
 
-</html>
+
