@@ -38,31 +38,40 @@ if(!empty($input)){
       'message' => 'Please add a message'
     ]]
 
-    ];
+  ];
 
-    $valid->check($input);
+  $valid->check($input);
 
-    if(empty($valid ->errors)){
+  if(empty($valid ->errors)){
 
-      # Instantiate the client.
-      $mgClient = new Mailgun(MG_KEY);
-      $domain = MG_DOMAIN;
+    /*# Instantiate the client.
+    $mgClient = new Mailgun(MG_KEY);
+    $domain = MG_DOMAIN;
 
-      # Make the call to the client.
-      $result = $mgClient->sendMessage("$domain", array(
-          'from'    => "{$input['name']} <{$input['email']}>",
-          'to'      => 'John Falzone <21jroc@gmail.com>',
-          'subject' => $input['subject'],
-          'text'    => $input['message']
-          )
-        );
+    # Make the call to the client.
+    $result = $mgClient->sendMessage("$domain", array(
+        'from'    => "{$input['name']} <{$input['email']}>",
+        'to'      => 'John Falzone <21jroc@gmail.com>',
+        'subject' => $input['subject'],
+        'text'    => $input['message']
+        )
+      );
 
-      var_dump($result);
+    var_dump(json_decode($result));
+    */
 
-      $message = "<div class=\alert alert-success\">Your form had been submitted!</div>";
-    }else{
-      $message = "<div class=\"alert alert-danger\">Your form has errors</div>";
-    }
+  var_dump($result);
+  $response = 200;
+
+  if($response === 200){
+    //$message = "<div class=\alert alert-success\">Your form had been submitted!</div>";
+    //header('LOCATION: thanks.php');
+  }
+
+  else{
+    $message = "<div class=\"alert alert-danger\">Your form has errors</div>";
+  }
+  }
 }
 
 ?>
