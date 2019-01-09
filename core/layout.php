@@ -28,10 +28,12 @@ function active ($name){
 
 <?php endif; ?>
 
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<base href ="/">
 
-  <link rel="stylesheet" type="text/css" href="./dist/css/main.min.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<link rel="stylesheet" type="text/css" href="./dist/css/main.min.css">
 </head>
 
 <body>
@@ -40,12 +42,10 @@ function active ($name){
     <a id="toggleMenu">Menu</a>
     <nav>
       <ul>
-        <li><a href="index.php
-        " <?php echo active('index.php'); ?>>Home</a></li>
-        <li><a href="resume.php
-        "<?php echo active('resume.php'); ?>>Résumé</a></li>
-        <li><a href="contact.php
-        "<?php echo active('contact.php'); ?>>Contact</a></li>
+        <li><a href="index.php" <?php echo active('index.php'); ?>>Home</a></li>
+        <li><a href="resume.php" <?php echo active('resume.php'); ?>>Résumé</a></li>
+        <li><a href="contact.php" <?php echo active('contact.php'); ?>>Contact</a></li>
+        <li><a href="posts" <?php echo active('/posts'); ?>>Post</a></li>
       </ul>
     </nav>
   </header>
