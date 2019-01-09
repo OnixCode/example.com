@@ -1,3 +1,13 @@
+<?php
+
+function active ($name){
+  $current = basename($_SERVER ['PHP_SELF']);
+    if($current === $name){
+      return 'active';
+    }
+    return null;
+  }
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -31,11 +41,11 @@
     <nav>
       <ul>
         <li><a href="index.php
-        ">Home</a></li>
+        " <?php echo active('index.php'); ?>>Home</a></li>
         <li><a href="resume.php
-        ">Résumé</a></li>
+        "<?php echo active('resume.php'); ?>>Résumé</a></li>
         <li><a href="contact.php
-        ">Contact</a></li>
+        "<?php echo active('contact.php'); ?>>Contact</a></li>
       </ul>
     </nav>
   </header>
