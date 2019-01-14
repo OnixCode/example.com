@@ -6,9 +6,9 @@ require '../../core/db_connect.php';
 $input=filter_input_array(INPUT_GET);
 $slug=preg_replace("/[^a-z0-9-]+/","",$input['slug']);
 
-$stmt = $pdo->prepare("SELECT * FROM posts WHERE slug = :slug");
-$stmt->execute(['slug'=>$slug]);
-$row = $stmt->fetch();
+$stmt = $pdo->prepare("SELECT * FROM posts WHERE slug = :slug"); //calls the data and holds
+$stmt->execute(['slug'=>$slug]); //prepares the data
+$row = $stmt->fetch(); //pulls to our site
 
 $meta=[];
 $meta['title']=$row['title'];
