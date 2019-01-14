@@ -1,5 +1,6 @@
 <?php
 require '../../core/functions.php';
+require '../../core/session.php';
 require '../../config/keys.php';
 require '../../core/db_connect.php';
 
@@ -24,13 +25,15 @@ if(!empty($input)){
     $slug = slug($input['title']);
 
     //sanitized insert
-    $sql = 'INSERT INTO posts SET id=uuid(), title=?, slug=?, body=?';
+    $sql = 'INSERT INTO posts SET id=uuid(), title=?, slug=?, body=?, meta_keywords=?, meta_description=?';
     if($pdo->prepare($sql)->execute([
         $input['title'],
         $slug,
-        $input['body']
+        $input['body'],
+        $input['meta_description'],
+        $input['meta_keywords']
     ])){ //if the above execute statement runs correctly you go back to following line as a redirection, else Something bad happened
-       header('LOCATION:/posts');
+       header('LOCATION:/posts/view.php?slug=' . $slug);
     }else{
         $message = 'Something bad happened';
     }

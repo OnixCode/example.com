@@ -46,6 +46,16 @@ function active ($name){
         <li><a href="resume.php" <?php echo active('resume.php'); ?>>Résumé</a></li>
         <li><a href="contact.php" <?php echo active('contact.php'); ?>>Contact</a></li>
         <li><a href="posts" <?php echo active('/posts'); ?>>Post</a></li>
+        <li><a href="users" <?php echo active('/users'); ?>>User</a></li>
+
+        <li>
+          <?php if(!empty($_SESSION['user']['id'])): ?>
+            <a href="logout.php">Logout</a>
+          <?php else: ?>
+            <a href="login.php" <?php echo active('/login.php'); ?> >Login</a>
+          <?php endif; ?>
+        </li>
+
       </ul>
     </nav>
   </header>
