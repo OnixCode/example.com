@@ -14,7 +14,7 @@ $meta['title']= "Sender's Mailbox";
 
 $content=<<<EOT
 <h1>{$row['name']}</h1>
-{$row['email']}<br>
+{$row['email']}<br><br>
 {$row['message']}
 
 <hr>
